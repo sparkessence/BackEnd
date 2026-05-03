@@ -18,10 +18,10 @@ class OrderController(
     @GetMapping
     fun getOrders() = orderService.getAllOrders()
 
-    @GetMapping("{id}")
+    @GetMapping("/{id}")
     fun getOrderById(@PathVariable id: Long) = orderService.getOrderById(id)
 
-    @DeleteMapping("{id}")
+    @DeleteMapping("/{id}")
     fun deleteOrder(@PathVariable id: Long) = orderService.deleteOrder(id)
 
     @PostMapping
