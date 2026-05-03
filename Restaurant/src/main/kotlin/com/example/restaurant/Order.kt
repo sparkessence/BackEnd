@@ -3,11 +3,14 @@ package com.example.restaurant
 import jakarta.persistence.*
 
 @Entity
-data class Order(
+@Table(name = "orders")
+class Order(
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long = 0,
-    var dishName: String,
-    var quantity: Int,
-    var status: String
+    var id: Long? = null,
+
+    var dishName: String = "",
+    var quantity: Int = 0,
+    var status: String = ""
 )
