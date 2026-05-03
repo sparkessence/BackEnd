@@ -13,4 +13,4 @@ spring.profiles.default=local
 spring.profiles.default=postgres
 
 Cleanup again run as admin
-DROP TABLE orders;
+DROP DATABASE orders;
